@@ -4,29 +4,29 @@ server:
 spring:
   application:
     name: api-gateway
-
   cloud:
     gateway:
       routes:
         - id: user-service
-          uri: lb://USER-SERVICE
+          uri: lb://user-service
           predicates:
             - Path=/users/**
 
         - id: order-service
-          uri: lb://ORDER-SERVICE
+          uri: lb://order-service
           predicates:
             - Path=/orders/**
 
         - id: cart-service
-          uri: lb://CART-SERVICE
+          uri: lb://cart-service
           predicates:
             - Path=/carts/**
 
         - id: product-service
-          uri: lb://PRODUCT-SERVICE
+          uri: lb://product-service
           predicates:
             - Path=/products/**
+
 
 management:
   endpoints:
