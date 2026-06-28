@@ -12,3 +12,22 @@ eureka:
 
   server:
     enable-self-preservation: false
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+
+  endpoint:
+    health:
+      show-details: always
+      show-components: always
+
+  metrics:
+    enable:
+      all: true
+
+  info:
+    env:
+      enabled: true
