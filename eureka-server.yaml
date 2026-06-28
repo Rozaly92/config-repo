@@ -13,6 +13,10 @@ eureka:
   server:
     enable-self-preservation: false
 
+  instance:
+    prefer-ip-address: true
+    instance-id: ${spring.application.name}:${server.port}
+
 management:
   endpoints:
     web:
